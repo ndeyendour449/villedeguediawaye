@@ -53,7 +53,7 @@
 </style>
 </head>
 
-<body class="archive category wide top_panel_above">
+<body class="services-page">
     <a id="toc_home" class="sc_anchor" title="Home" data-description="&lt;i&gt;Return to Home&lt;/i&gt; - &lt;br&gt;navigate to home page of the site" data-icon="icon-home" data-url="index.html" data-separator="yes"></a>
     <a id="toc_top" class="sc_anchor" title="To Top" data-description="&lt;i&gt;Back to top&lt;/i&gt; - &lt;br&gt;scroll to top of the page" data-icon="icon-up" data-url="" data-separator="yes"></a>
     <!--[if lt IE 9]>
@@ -248,7 +248,30 @@
 }
 
 </style>
+<style>
 
+.masonry{
+    display:flex !important;
+    flex-wrap:wrap !important;
+    gap:25px;
+}
+
+.isotopeElement{
+    position:relative !important;
+    top:auto !important;
+    left:auto !important;
+    float:none !important;
+}
+
+.gallery-page .isotopeElement{
+    width:calc(33.33% - 17px) !important;
+}
+
+.services-page .isotopeElement{
+    width:calc(50% - 13px) !important;
+}
+
+</style>
 
 <div class="mainWrap without_sidebar">
 
