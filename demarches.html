@@ -315,136 +315,283 @@
           </div>
         </header>
         <!-- Page title -->
-        <div id="topOfPage" class="topTabsWrap">
-          <div class="main">
-            <h3 class="pageTitle h3">LES SERVICES DE L’ETAT CIVIL</h3>
-          </div>
-        </div>
+       <style>
 
-        <div class="mainWrap without_sidebar">
-          <div class="main">
-            <div class="content">
-              <div class="masonryWrap">
-                <section class="masonry isotopeNOanim" data-columns="3">
-                  <!-- MARIAGE COUTUMIER -->
-                  <article class="isotopeElement post_format_standard odd">
-                    <div class="isotopePadding">
-                      <div class="thumb">
-                        <img src="images/P17.jpg" alt="Mariage coutumier" />
-                      </div>
-                      <h4>MARIAGE COUTUMIER</h4>
-                      <p>
-                        Un mariage coutumier qui n’a pas été constaté par un
-                        officier de l’état civil doit être reconnu
-                        officiellement pour produire certains effets juridiques.
-                      </p>
-                      <a href="#">En savoir plus</a>
-                    </div>
-                  </article>
+.masonry{
+    display:flex !important;
+    flex-wrap:wrap;
+    gap:30px;
+}
 
-                  <!-- CERTIFICAT DE VIE COLLECTIF -->
-                  <article class="isotopeElement post_format_standard even">
-                    <div class="isotopePadding">
-                      <div class="thumb">
-                        <img
-                          src="images/P16.jpg"
-                          alt="Certificat de vie collectif"
-                        />
-                      </div>
-                      <h4>CERTIFICAT DE VIE COLLECTIF</h4>
-                      <p>
-                        Le certificat de vie collectif permet d’attester que les
-                        enfants mineurs sont bien en vie et à la charge des
-                        parents.
-                      </p>
-                      <a href="#">En savoir plus</a>
-                    </div>
-                  </article>
+.isotopeElement{
+    width:calc(33.33% - 20px);
+}
 
-                  <!-- ACTE DE NAISSANCE -->
-                  <article class="isotopeElement post_format_standard odd">
-                    <div class="isotopePadding">
-                      <div class="thumb">
-                        <img src="images/P15.jpg" alt="Acte de naissance" />
-                      </div>
-                      <h4>ACTE DE NAISSANCE</h4>
-                      <p>
-                        La déclaration de naissance permet d’obtenir
-                        immédiatement et gratuitement un acte de naissance
-                        officiel.
-                      </p>
-                      <a href="#">En savoir plus</a>
-                    </div>
-                  </article>
+.isotopePadding{
+    background:#fff;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    transition:0.3s ease;
+    height:100%;
+}
 
-                  <!-- BULLETIN DE NAISSANCE -->
-                  <article class="isotopeElement post_format_standard even">
-                    <div class="isotopePadding">
-                      <div class="thumb">
-                        <img src="images/P14.jpg" alt="Bulletin de naissance" />
-                      </div>
-                      <h4>BULLETIN DE NAISSANCE</h4>
-                      <p>
-                        Le bulletin de naissance est la reproduction succincte
-                        de l’acte de naissance pour usage administratif.
-                      </p>
-                      <a href="#">En savoir plus</a>
-                    </div>
-                  </article>
+.isotopePadding:hover{
+    transform:translateY(-6px);
+    box-shadow:0 18px 40px rgba(0,0,0,0.14);
+}
 
-                  <!-- CERTIFICAT DE DÉCÈS -->
-                  <article class="isotopeElement post_format_standard odd">
-                    <div class="isotopePadding">
-                      <div class="thumb">
-                        <img src="images/P13.jpg" alt="Certificat de décès" />
-                      </div>
-                      <h4>CERTIFICAT DE DÉCÈS</h4>
-                      <p>
-                        Le bulletin de décès est la reproduction succincte de
-                        l’acte de décès et sert pour les démarches
-                        administratives.
-                      </p>
-                      <a href="#">En savoir plus</a>
-                    </div>
-                  </article>
+.thumb img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    display:block;
+}
 
-                  <!-- RECTIFICATION D’UN ACTE -->
-                  <article class="isotopeElement post_format_standard even">
-                    <div class="isotopePadding">
-                      <div class="thumb">
-                        <img
-                          src="images/P13.jpg"
-                          alt="Rectification acte état civil"
-                        />
-                      </div>
-                      <h4>RECTIFICATION D’UN ACTE D’ÉTAT</h4>
-                      <p>
-                        La rectification d’un acte d’état civil consiste à
-                        corriger les erreurs présentes dans les documents
-                        officiels.
-                      </p>
-                      <a href="#">En savoir plus</a>
-                    </div>
-                  </article>
+.isotopePadding h4{
+    padding:22px 25px 10px;
+    margin:0;
+    font-size:20px;
+    line-height:1.4;
+}
 
-                  <!-- CERTIFICAT DE MARIAGE -->
-                  <!-- <article class="isotopeElement post_format_standard odd last">
+.isotopePadding p{
+    padding:0 25px 20px;
+    margin:0;
+    line-height:1.8;
+    color:#555;
+}
+
+.isotopePadding a{
+    display:inline-block;
+    margin:0 25px 25px;
+    padding:10px 22px;
+    background:#b91c1c;
+    color:#fff;
+    border-radius:6px;
+    text-decoration:none;
+    transition:0.3s ease;
+}
+
+.isotopePadding a:hover{
+    background:#7f1d1d;
+}
+
+/* TABLETTE */
+@media(max-width:992px){
+
+    .isotopeElement{
+        width:calc(50% - 15px);
+    }
+
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+    .isotopeElement{
+        width:100%;
+    }
+
+}
+
+</style>
+
+
+<div id="topOfPage" class="topTabsWrap">
+
+    <div class="main">
+
+        <h3 class="pageTitle h3">
+            LES SERVICES DE L’ETAT CIVIL
+        </h3>
+
+    </div>
+
+</div>
+
+
+<div class="mainWrap without_sidebar">
+
+    <div class="main">
+
+        <div class="content">
+
+            <div class="masonryWrap">
+
+                <section class="masonry isotopeNOanim">
+
+                    <!-- MARIAGE -->
+                    <article class="isotopeElement post_format_standard odd">
+
                         <div class="isotopePadding">
+
                             <div class="thumb">
-                                <img src="images/P12.jpg" alt="Certificat de mariage">
+                                <img src="images/P17.jpg" alt="Mariage coutumier">
                             </div>
-                            <h4>CERTIFICAT DE MARIAGE</h4>
+
+                            <h4>
+                                MARIAGE COUTUMIER
+                            </h4>
+
                             <p>
-                                Le certificat de mariage est une pièce officielle attestant l’union entre deux personnes devant l’état civil.
+                                Un mariage coutumier qui n’a pas été constaté
+                                par un officier de l’état civil doit être reconnu
+                                officiellement.
                             </p>
-                            <a href="#">En savoir plus</a>
+
+                            <a href="#">
+                                En savoir plus
+                            </a>
+
                         </div>
-                    </article> -->
+
+                    </article>
+
+
+                    <!-- CERTIFICAT -->
+                    <article class="isotopeElement post_format_standard even">
+
+                        <div class="isotopePadding">
+
+                            <div class="thumb">
+                                <img src="images/P16.jpg" alt="Certificat de vie collectif">
+                            </div>
+
+                            <h4>
+                                CERTIFICAT DE VIE COLLECTIF
+                            </h4>
+
+                            <p>
+                                Ce certificat permet d’attester que les enfants
+                                mineurs sont bien en vie et à la charge des parents.
+                            </p>
+
+                            <a href="#">
+                                En savoir plus
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ACTE -->
+                    <article class="isotopeElement post_format_standard odd">
+
+                        <div class="isotopePadding">
+
+                            <div class="thumb">
+                                <img src="images/P15.jpg" alt="Acte de naissance">
+                            </div>
+
+                            <h4>
+                                ACTE DE NAISSANCE
+                            </h4>
+
+                            <p>
+                                La déclaration de naissance permet d’obtenir
+                                gratuitement un acte officiel.
+                            </p>
+
+                            <a href="#">
+                                En savoir plus
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- BULLETIN -->
+                    <article class="isotopeElement post_format_standard even">
+
+                        <div class="isotopePadding">
+
+                            <div class="thumb">
+                                <img src="images/P14.jpg" alt="Bulletin de naissance">
+                            </div>
+
+                            <h4>
+                                BULLETIN DE NAISSANCE
+                            </h4>
+
+                            <p>
+                                Reproduction succincte de l’acte de naissance
+                                pour usage administratif.
+                            </p>
+
+                            <a href="#">
+                                En savoir plus
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- DECES -->
+                    <article class="isotopeElement post_format_standard odd">
+
+                        <div class="isotopePadding">
+
+                            <div class="thumb">
+                                <img src="images/P13.jpg" alt="Certificat de décès">
+                            </div>
+
+                            <h4>
+                                CERTIFICAT DE DÉCÈS
+                            </h4>
+
+                            <p>
+                                Document administratif servant aux démarches
+                                officielles après un décès.
+                            </p>
+
+                            <a href="#">
+                                En savoir plus
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- RECTIFICATION -->
+                    <article class="isotopeElement post_format_standard even">
+
+                        <div class="isotopePadding">
+
+                            <div class="thumb">
+                                <img src="images/P13.jpg" alt="Rectification acte état civil">
+                            </div>
+
+                            <h4>
+                                RECTIFICATION D’UN ACTE D’ÉTAT
+                            </h4>
+
+                            <p>
+                                Permet de corriger les erreurs présentes
+                                dans les documents officiels.
+                            </p>
+
+                            <a href="#">
+                                En savoir plus
+                            </a>
+
+                        </div>
+
+                    </article>
+
                 </section>
-              </div>
+
             </div>
-          </div>
+
         </div>
+
+    </div>
+
+</div>
         <!-- /Content -->
         <!-- Footer -->
         <footer class="footerWrap footerStyleLight">
